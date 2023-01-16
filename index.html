@@ -12,32 +12,44 @@
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <main class="container">
 
-  How did we do?
+    <!-- Rating state start -->
+    <div class="card rating-card">
+      <h1 class="sr-only">Interactive Rating Component</h1>
+      <div class="icon">
+        <img class="star-icon" src="./images/icon-star.svg" alt="star-icon">
+      </div>
+      <h2 class="title">How did we do?</h2>
+      <p class="sub-text">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+      
+      <div class="ratings-container">
+        <div class="rating" data-value="1">1</div>
+        <div class="rating" data-value="2">2</div>
+        <div class="rating" data-value="3">3</div>
+        <div class="rating" data-value="4">4</div>
+        <div class="rating" data-value="5">5</div>
+      </div>
+      <button class="submit-btn" type="submit" disabled>Submit</button>
+    </div>
+   <!-- Rating state end -->
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
+   <!-- Thank you state start -->
+   <div class="card thank-you-card hidden">
+     <img src="./images/illustration-thank-you.svg" alt="">
+     <div class="rating-text-container">
+      <p class="rating-text">
+        You selected <span id="rating">#</span> out of 5
+      </p>
+     </div>
+     <h2 class="title">Thank you!</h2>
+     <p class="subtext">We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
+   </div>
   <!-- Thank you state end -->
-
-  
- 
+</main>
+          
   <script src="./JS/index.js"></script>
 </body>
 </html>

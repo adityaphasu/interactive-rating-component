@@ -64,6 +64,15 @@ h2{
     padding: 1.5rem 0;
 }
 
+.ratings-container input {
+    display: none;
+}
+
+.ratings-container input:checked + label {
+   background-color: var(--medium-grey);
+   color: var(--white);
+}
+
 .icon,
 .rating{
     display: flex;
@@ -79,10 +88,7 @@ h2{
     cursor: pointer;
 }
 
-.selected-rating{
-  color: var(--white);
-  background-color: var(--medium-grey);
-}
+
 
 .submit-btn{
     border: none;

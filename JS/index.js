@@ -4,15 +4,8 @@ const thankYouRating = document.querySelector("#rating");
 const ratingCard = document.querySelector('.rating-card');
 const thankYouCard = document.querySelector(".thank-you-card");
 
-// RATING SELECTION
 ratings.forEach((rating) => {
-   rating.addEventListener('click', (e) => {
-    e.preventDefault();
-    ratings.forEach((rating) => {
-    rating.classList.remove("selected-rating");
-    });
-    rating.classList.add("selected-rating");
-
+   rating.addEventListener('click', () => {
     btn.disabled = false;
    });  
 });
@@ -21,9 +14,10 @@ ratings.forEach((rating) => {
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
-    let selectedRating = document.querySelector('.selected-rating');
-    let ratingValue = selectedRating.getAttribute('data-value');
+
+    let selectedRating = document.querySelector('input[name="rate"]:checked').value;
+    thankYouRating.textContent = selectedRating;
+
     ratingCard.classList.add("hidden");
-    thankYouRating.innerHTML = ratingValue;
     thankYouCard.classList.remove("hidden");
 });
